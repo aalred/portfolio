@@ -13,7 +13,7 @@ const Icons = () => {
             className={styles.icons}>
                 <LinkedInIcon />
             </a>
-            <a target="_blank" 
+            <a 
             className={styles.icons}
             href="https://mail.google.com/mail/?view=cm&fs=1&to=aalex.red1@gmail.com"  >
                 <EmailIcon />

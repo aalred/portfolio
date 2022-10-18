@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <div className={styles['container__shadow']}>
         <Layout>
           <div className={styles['container__text']}>
-            <h1> Hello! I'm Josue Rojas <br /> Full Stack Web Developer </h1>
+            <h1> Hello I&apos;m Josue Rojas <br /> Full Stack Web Developer </h1>
           </div>
           <div className={styles['container__items']} id='component' >
             <Button className={styles['container__items-btn']} onClick={() => handleClick()} variant="text" color="inherit">

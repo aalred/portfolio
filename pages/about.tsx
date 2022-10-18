@@ -17,7 +17,7 @@ const Aboutme: NextPage = () => {
           <div className={styles['content__description']}>
             <br />
             <b>
-              Hello! I'm a web developer and I have experience with teamwork, stack MERN, DB managment {'(relationals and no relationals)'}, API REST, SCRUM and a great predisposition. <br />
+              Hello! I&apos;m a web developer and I have experience with teamwork, stack MERN, DB managment {'(relationals and no relationals)'}, API REST, SCRUM and a great predisposition. <br />
               I studied +700 hrs in the bootcamp <a href='https://www.soyhenry.com/hiring-en'> Soy Henry </a> with theoretical and practical exercises. <br />
               I developed an individual and group project that allowed me to lay the foundations to start in this new tech world.
             </b>
@@ -28,7 +28,7 @@ const Aboutme: NextPage = () => {
             <div className={styles['content__skills']}>
               <h2>Soft-Skills</h2>
               <ul>
-                {skills.map(e => <li>{e.name}</li>)}
+                {skills.map((e, i) => <li key={i}>{e.name}</li>)}
               </ul>
               <br />
               <br />
