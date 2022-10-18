@@ -1,5 +1,3 @@
-import Image, {StaticImageData} from 'next/image';
-
 export interface iProject {
     id: number;
     title: string;

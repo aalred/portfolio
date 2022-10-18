@@ -1,5 +1,4 @@
 .dialog{
-    // background-color: black;
     color: black;
     position: relative;
     width: 100vw;
@@ -8,7 +7,6 @@
     }
     &__title{
         display: flex;
-        // width: 100vw;
         padding: 10px;
         justify-content: space-between;
     }
