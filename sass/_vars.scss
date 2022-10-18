@@ -1,0 +1,20 @@
+// $display: flex;
+
+@mixin display {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin minHeight {
+    min-height: 100vh;
+}
+
+@mixin displayItems($display, $direction, $items, $justify) {
+    display: $display;
+    flex-direction: $direction;
+    align-items: $items;
+
+    @if $justify != none {
+        justify-content: $justify;
+    }
+}

@@ -1,0 +1,72 @@
+@use 'vars';
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.container {
+    @include vars.minHeight;
+
+    background: {
+        image: url("../img-resources/background.jpg");
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+    }
+
+    &__shadow {
+        background: rgba(0, 0, 0, 0.758);
+        @include vars.minHeight;
+    }
+
+    &__text {
+        display: flex;
+        color: rgb(255, 255, 255);
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+
+        font: {
+            size: 4vw;
+            family: 'Anton', sans-serif;
+        }
+
+        @media (max-width : 450px) {
+            text-align: center;
+
+            font: {
+                size: 5vw;
+            }
+
+            & h1 {
+                margin-top: 20%;
+            }
+        }
+    }
+
+    &__items {
+        @include vars.displayItems(flex, column, center, center);
+        // justify-content: center;
+
+        &-btn {
+            padding: 25px;
+            margin: 25px;
+
+            font: {
+                size: 41px;
+                font-family: 'Anton', sans-serif;
+            }
+
+            &:hover {
+                border-radius: 3%;
+                background-color: rgba(255, 255, 255, 0.25);
+            }
+            @media (max-width : 450px) {
+                padding: 5px;
+                margin: 5px;
+    
+                font: {
+                    size: 25px;
+                }
+            }
+        }
+
+    }
+}

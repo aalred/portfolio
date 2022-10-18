@@ -1,0 +1,13 @@
+@use 'vars';
+
+.about {
+    @include vars.minHeight;
+
+    &__description {
+        margin: auto 90px;
+
+        font: {
+            size: 2vw;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.footerText {
+  padding: 25px;
+  width: 100vw;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.icons:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=Layout.module.css.map */

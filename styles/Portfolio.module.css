@@ -1,0 +1,9 @@
+.about {
+  min-height: 100vh;
+}
+.about__description {
+  margin: auto 90px;
+  font-size: 2vw;
+}
+
+/*# sourceMappingURL=Portfolio.module.css.map */

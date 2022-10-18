@@ -1,0 +1,44 @@
+@use 'vars';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+.content {
+    &__description {
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+        @include vars.displayItems(flex, column, center, center);
+
+        & b {
+            margin-top: 6vh;
+            padding: 0 10px 10px 10px;
+        }
+
+        font: {
+            size: 2vw;
+            family: 'Nunito', sans-serif;
+        }
+
+        @media (max-width : 450px) {
+            font: {
+                size: 5vw;
+            }
+        }
+    }
+
+    &__skills {
+        @include vars.displayItems(flex, column, center, center);
+    }
+}
+
+.resource {
+
+    &__pictures {
+
+        &-container {
+           @include vars.displayItems(inline-flex, column, center, none);
+            margin: 20px;
+        }
+
+    }
+}
