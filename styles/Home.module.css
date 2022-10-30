@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 .container {
   min-height: 100vh;
-  background-image: url("../img-resources/background.jpg");
+  background-image: url("https://res.cloudinary.com/de3jik7nt/image/upload/v1666070736/background_fzqgyp.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
