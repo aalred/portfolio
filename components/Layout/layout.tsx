@@ -35,11 +35,14 @@ const Layout = ({ children }: props) => {
                         </header>
                     </Grid>
                     <Grid item xs={12} >
+                        <br />
                         {children}
                         <br />
                     </Grid>
                     <Grid item xs={12} >
+                        <br />
                         <Footer />
+                        <br />
                     </Grid>
                 </Grid>
             </div>

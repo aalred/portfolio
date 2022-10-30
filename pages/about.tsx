@@ -16,25 +16,26 @@ const Aboutme: NextPage = () => {
         <div className={styles.content}>
           <div className={styles['content__description']}>
             <br />
-            <b>
-              Hello! I&apos;m a web developer and I have experience with teamwork, stack MERN, DB managment {'(relationals and no relationals)'}, API REST, SCRUM and a great predisposition. <br />
-              I studied +700 hrs in the bootcamp <a href='https://www.soyhenry.com/hiring-en'> Soy Henry </a> with theoretical and practical exercises. <br />
-              I developed an individual and group project that allowed me to lay the foundations to start in this new tech world.
-            </b>
-            <div className={styles['content__skills']}>
+            <div className={styles['content__container']}>
+              <p>Hello! I&apos;m a web developer and I have experience with teamwork, stack MERN, DB managment {'(relationals and no relationals)'}, API REST, SCRUM and a I like to learn new things.</p>
+              <p>I studied +700 hrs in the bootcamp <a href='https://www.soyhenry.com/hiring-en' className={styles['content__link']} > Soy Henry </a> with theoretical and practical exercises.</p>
+
+              <p>I am willing to face new challenges, have new experiences and continuously improve</p>
+            </div>
+            <div className={`${styles['content__container']}`}>
               <h2>Tech-Skills</h2>
               <TechSkills />
             </div>
-            <div className={styles['content__skills']}>
+            <div className={`${styles['content__container']}`}>
               <h2>Soft-Skills</h2>
-              <ul>
-                {skills.map((e, i) => <li key={i}>{e.name}</li>)}
-              </ul>
-              <br />
-              <br />
+              <div className={styles['content__box']}>
+                {skills.map((e, i) => <b key={i} className={`${styles['content__box-item']}`}>{e.name}</b>)}
+              </div>
             </div>
           </div>
         </div>
+        <br />
+        <br />
       </Layout>
     </div>
   );

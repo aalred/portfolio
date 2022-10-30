@@ -1,6 +1,6 @@
 .dialog{
     color: black;
-    position: relative;
+    position: fixed;
     width: 100vw;
     @media (max-width : 450px) {
         
@@ -13,7 +13,16 @@
     &__btn{
         position: absolute;
         right: 0;
-        background-color: aqua;
         margin: 10px;
+    }
+}
+
+.contact{
+    &__field{
+        margin: 10px 5px;
+    }
+
+    &__dialog{
+        min-height: 25vh;
     }
 }

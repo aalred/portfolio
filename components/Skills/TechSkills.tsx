@@ -16,16 +16,18 @@ import imgTypescript from '../../img-resources/tech-skills/TypeScript.svg';
 
 import styles from '../../styles/Content.module.css';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 import { iSkills } from '../../Interfaces';
 
 interface img extends iSkills {
     image: string;
-}
+    level?: string;
+};
 
 export default function TechSkills() {
+    let size = '20px';
 
     const images: img[] = [
         { name: 'JavaScript', image: imgJavascript },
@@ -46,15 +48,15 @@ export default function TechSkills() {
     ];
 
     return (
-        <div className={styles['resource__pictures']}>
+        <div className={`${styles['content__box']} `} >
             {images?.map((e: img, i: number) => <div key={i}
-                className={styles['resource__pictures-container']}>
-                <Image
-                    width={'50px'}
-                    height={'50px'}
-                    className={styles['resource__pictures-Image']}
-                    src={e.image} alt={e.name} />
+                className={`${styles['content__box-item']}`}>
                 <p>{e.name}</p>
+                   <Image
+                    width={size}
+                    height={size}
+                    className={styles['content__Image']}
+                    src={e.image} alt={e.name} />
             </div>
             )}
         </div>

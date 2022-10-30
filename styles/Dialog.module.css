@@ -1,6 +1,6 @@
 .dialog {
   color: black;
-  position: relative;
+  position: fixed;
   width: 100vw;
 }
 .dialog__title {
@@ -11,8 +11,14 @@
 .dialog__btn {
   position: absolute;
   right: 0;
-  background-color: aqua;
   margin: 10px;
+}
+
+.contact__field {
+  margin: 10px 5px;
+}
+.contact__dialog {
+  min-height: 25vh;
 }
 
 /*# sourceMappingURL=Dialog.module.css.map */

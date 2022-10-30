@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
 .content__description {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,27 +7,34 @@
   font-size: 2vw;
   font-family: "Nunito", sans-serif;
 }
-.content__description b {
-  margin-top: 6vh;
-  padding: 0 10px 10px 10px;
-}
 @media (max-width: 450px) {
   .content__description {
     font-size: 5vw;
   }
 }
-.content__skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.content__container {
+  background-color: rgb(50, 50, 50);
+  margin: 5px 20px;
+  padding: 30px;
+  width: 75vw;
 }
-
-.resource__pictures-container {
-  display: inline-flex;
-  flex-direction: column;
+.content__box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 10px;
+}
+.content__box-item {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  margin: 20px;
+  justify-content: space-between;
+  border-radius: 2%;
+  padding: 0 5px;
+  background: linear-gradient(270deg, rgba(2, 0, 36, 0) 2%, rgb(9, 12, 121) 52%, rgb(0, 65, 122) 100%);
+}
+.content__link {
+  color: #ccc;
 }
 
 /*# sourceMappingURL=Content.module.css.map */
