@@ -8,7 +8,7 @@ const Footer = () => {
 
     return (
         <footer >
-            <h2>Contact with me!: </h2>
+            <h2>Contact me: </h2>
             <div>
                 <Icons />
             </div>
