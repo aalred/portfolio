@@ -9,6 +9,7 @@ import Alert from '@mui/material/Alert';
 
 import emailjs from '@emailjs/browser';
 import React, { useState, useEffect } from 'react';
+import { env } from 'process';
 
 import { form, validate, iData, errors } from './validateInfo';
 
@@ -17,6 +18,7 @@ interface props {
     event: boolean;
     onSubmit: () => void;
 };
+
 
 const Form = () => {
     const [dataValidate, setIsValidated] = useState(false),
@@ -32,7 +34,7 @@ const Form = () => {
         };
         setData(form);
         setIsValidated(false);
-        emailjs.send('service_0qd1vyt', 'template_pzvds7a', templateParams, 'K02efu2TSJaGItKei')
+        emailjs.send('', '', templateParams, env.NEXT_PUBLIC_KEY)
             .then(function () {
                 setOpen(!open);
             }, function (error) {
@@ -69,6 +71,7 @@ const Form = () => {
         } else {
             setIsValidated(false);
         }
+        console.log(env);
     }, [validated]);
 
 

@@ -1,28 +1,25 @@
-.dialog{
+.dialog {
     color: black;
     position: fixed;
     width: 100vw;
-    @media (max-width : 450px) {
-        
-    }
-    &__title{
+    &__title {
         display: flex;
         padding: 10px;
         justify-content: space-between;
     }
-    &__btn{
+    &__btn {
         position: absolute;
         right: 0;
-        margin: 10px;
+        margin: 1vh;
     }
 }
 
-.contact{
-    &__field{
+.contact {
+    &__field {
         margin: 10px 5px;
     }
 
-    &__dialog{
+    &__dialog {
         min-height: 25vh;
     }
 }

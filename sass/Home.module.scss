@@ -1,18 +1,20 @@
-@use 'vars';
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@use "vars";
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 .container {
     @include vars.minHeight;
 
     background: {
-        image: url("https://res.cloudinary.com/de3jik7nt/image/upload/v1666070736/background_fzqgyp.jpg");
-        size: cover;
-        repeat: no-repeat;
-        position: center;
+        color: rgb(25, 25, 25);
     }
-
     &__shadow {
-        background: rgba(0, 0, 0, 0.758);
+        background: {
+            image: url("../img-resources/background.jpg");
+            size: cover;
+            repeat: no-repeat;
+            position: center;
+            
+        } 
         @include vars.minHeight;
     }
 
@@ -25,10 +27,10 @@
 
         font: {
             size: 4vw;
-            family: 'Anton', sans-serif;
+            family: "Anton", sans-serif;
         }
 
-        @media (max-width : 450px) {
+        @media (max-width: 450px) {
             text-align: center;
 
             font: {
@@ -50,7 +52,7 @@
 
             font: {
                 size: 41px;
-                font-family: 'Anton', sans-serif;
+                font-family: "Anton", sans-serif;
             }
 
             &:hover {
@@ -58,7 +60,7 @@
                 background-color: rgba(255, 255, 255, 0.25);
             }
 
-            @media (max-width : 450px) {
+            @media (max-width: 450px) {
                 padding: 5px;
                 margin: 5px;
 
@@ -67,6 +69,5 @@
                 }
             }
         }
-
     }
 }
