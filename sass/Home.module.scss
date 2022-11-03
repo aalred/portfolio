@@ -6,7 +6,6 @@
 
     background: {
         image: url("../img-resources/background.jpg");
-        // color: rgb(25, 25, 25);
         size: cover;
         repeat: no-repeat;
         position: center;
@@ -14,11 +13,14 @@
 
     &__text {
         display: flex;
-        color: rgb(255, 255, 255);
         justify-content: center;
         justify-items: center;
         align-content: center;
-
+        background: linear-gradient(0deg, rgba(2, 0, 36, 0) 1%, rgba(9, 12, 121, 1) 100%);
+        & h2 {
+            padding: 20px;
+            border-radius: 5% 0;
+        }
         font: {
             size: 4vw;
             family: "Anton", sans-serif;

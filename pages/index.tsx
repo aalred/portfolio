@@ -15,10 +15,10 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <Layout>
+    <Layout>
+      <div className={styles.container}>
         <div className={styles['container__text']}>
-          <h2> Hello I&apos;m {"< Josue Rojas />"} <br /> Full Stack Web Developer </h2>
+          <h2 > Hello I&apos;m {"< Josue Rojas />"} <br /> Full Stack Web Developer </h2>
         </div>
         <div className={styles['container__items']} id='component' >
           <Button className={styles['container__items-btn']} onClick={() => handleClick()} variant="text" color="inherit">
@@ -30,8 +30,8 @@ const Home: NextPage = () => {
           <br />
           <br />
         </div>
-      </Layout >
-    </div>
+      </div>
+    </Layout >
   );
 }
 
