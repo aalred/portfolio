@@ -9,10 +9,8 @@ import Alert from '@mui/material/Alert';
 
 import emailjs from '@emailjs/browser';
 import React, { useState, useEffect } from 'react';
-import { env } from 'process';
 
 import { form, validate, errors } from './validateInfo';
-import { write } from 'fs';
 
 const email = {
     key: process.env.NEXT_PUBLIC_KEY + '',
