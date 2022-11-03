@@ -21,16 +21,16 @@ const NavBar: NextPage = () => {
     <Box >
       <AppBar className={styles.navbar}>
         <Toolbar className={styles['navbar__toolbar']}>
-          <div className={styles['navbar__logoContainer']}>
-            <Image
-              src={logo}
-              alt="logo"
-              onClick={() => router.push('/')}
-            />
-          </div>
-          <div className={styles['navbar__links']}>
-            {match ? <Links /> : <MenuMobile />}
-          </div>
+            <div className={styles['navbar__logoContainer']}>
+              <Image
+                src={logo}
+                alt="logo"
+                onClick={() => router.push('/')}
+              />
+            </div>
+            <div className={styles['navbar__links']}>
+              {match ? <Links /> : <MenuMobile />}
+            </div>
         </Toolbar>
       </AppBar>
     </Box>
