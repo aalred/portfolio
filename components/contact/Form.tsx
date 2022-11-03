@@ -99,8 +99,6 @@ const Form = () => {
                         <div className={styles['contact__field']}>
                             <TextField
                                 required
-                                multiline
-                                maxRows={4}
                                 id="message"
                                 label="Message"
                                 value={data.message}

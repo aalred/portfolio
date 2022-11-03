@@ -44,7 +44,6 @@ const Links = (props: props) => {
                 </Button>
             </Link >
             <div>
-
                 <Button color="inherit" onClick={handleClick} >
                     <div className={styles['navbar__link'] + '  ' + styles['navbar__links']}>
                         Contact
