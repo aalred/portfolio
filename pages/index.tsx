@@ -15,8 +15,8 @@ const Home: NextPage = () => {
   };
 
   return (
-    <Layout>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <Layout>
         <div className={styles['container__text']}>
           <h2 > Hello I&apos;m {"< Josue Rojas />"} <br /> Full Stack Web Developer </h2>
         </div>
@@ -30,8 +30,8 @@ const Home: NextPage = () => {
           <br />
           <br />
         </div>
-      </div>
-    </Layout >
+      </Layout >
+    </div>
   );
 }
 
