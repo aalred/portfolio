@@ -80,29 +80,32 @@ const Form = () => {
             <div>
                 <FormControl component="fieldset" onChange={(e: any) => handleChange(e)}>
                     <FormGroup >
-                        <TextField
-                            className={styles['contact__field']}
-                            required
-                            id="mail"
-                            label="Mail Contact"
-                            value={data.mail}
-                        />
-                        <TextField
-                            className={styles['contact__field']}
-                            required
-                            id="name"
-                            label="Name"
-                            value={data.name}
-                        />
-                        <TextField
-                            className={styles['contact__field']}
-                            required
-                            multiline
-                            maxRows={4}
-                            id="message"
-                            label="Message"
-                            value={data.message}
-                        />
+                        <div className={styles['contact__field']}>
+                            <TextField
+                                required
+                                id="mail"
+                                label="Mail Contact"
+                                value={data.mail}
+                            />
+                        </div>
+                        <div className={styles['contact__field']}>
+                            <TextField
+                                required
+                                id="name"
+                                label="Name"
+                                value={data.name}
+                            />
+                        </div>
+                        <div className={styles['contact__field']}>
+                            <TextField
+                                required
+                                multiline
+                                maxRows={4}
+                                id="message"
+                                label="Message"
+                                value={data.message}
+                            />
+                        </div>
                     </FormGroup>
                 </FormControl>
             </div>

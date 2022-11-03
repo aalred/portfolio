@@ -30,16 +30,25 @@ const Links = (props: props) => {
     return (
         <Box className={styles['navbar__links']}>
             <Link href={"/"} >
-                <Button color="inherit" disabled={!validatePath.index}
-                    className={styles['navbar__link'] + '  ' + styles['navbar__links']}
-                >Home</Button>
+                <Button color="inherit" disabled={!validatePath.index} >
+                    <div className={styles['navbar__link'] + '  ' + styles['navbar__links']}>
+                        Home
+                    </div>
+                </Button>
             </Link >
             <Link href={"/about"}>
-                <Button color="inherit" disabled={!validatePath.about} className={`${styles['navbar__link']} ${styles['navbar__links']}`}>About</Button>
+                <Button color="inherit" disabled={!validatePath.about}>
+                    <div className={styles['navbar__link'] + '  ' + styles['navbar__links']}>
+                        About
+                    </div>
+                </Button>
             </Link >
             <div>
 
-                <Button color="inherit" onClick={handleClick} className={`${styles['navbar__link']} ${styles['navbar__links']}`}>Contact
+                <Button color="inherit" onClick={handleClick} >
+                    <div className={styles['navbar__link'] + '  ' + styles['navbar__links']}>
+                        Contact
+                    </div>
                 </Button>
                 {open && <ContactDialog open={open} onChange={handleClick} />}
             </div>
