@@ -11,19 +11,20 @@ import emailjs from '@emailjs/browser';
 import React, { useState, useEffect } from 'react';
 import { env } from 'process';
 
-import { form, validate, iData, errors } from './validateInfo';
+import { form, validate, errors } from './validateInfo';
+import { write } from 'fs';
 
-interface props {
-    onChange: (data: iData) => void;
-    event: boolean;
-    onSubmit: () => void;
+const email = {
+    key: process.env.NEXT_PUBLIC_KEY + '',
+    template: process.env.NEXT_PUBLIC_TEMPLATE + '',
+    service: process.env.NEXT_PUBLIC_SERVICE + '',
 };
-
 
 const Form = () => {
     const [dataValidate, setIsValidated] = useState(false),
         [data, setData] = useState(form),
         [validated, setValidate] = useState(errors),
+        [isWrite, setWrite] = useState(false),
         [open, setOpen] = useState(false);
 
     function handleClick(): void {
@@ -34,7 +35,7 @@ const Form = () => {
         };
         setData(form);
         setIsValidated(false);
-        emailjs.send('', '', templateParams, env.NEXT_PUBLIC_KEY)
+        emailjs.send(email.service, email.template, templateParams, email.key)
             .then(function () {
                 setOpen(!open);
             }, function (error) {
@@ -43,24 +44,18 @@ const Form = () => {
 
     };
 
-
     function handleChange(e: any) {
+        let value: boolean;
         if (e.target.id === 'mail') {
             setValidate({ ...validated, mail: validate.mail(e.target) });
             setData({ ...data, mail: e.target.value });
         } else if (e.target.id === 'name') {
-            if (e.target.value.trim()) {
-                setValidate({ ...validated, name: true });
-            } else {
-                setValidate({ ...validated, name: false });
-            }
+            value = e.target.value.trim() ? true : false;
+            setValidate({ ...validated, name: value });
             setData({ ...data, name: e.target.value });
         } else if (e.target.id === 'message') {
-            if (e.target.value.trim()) {
-                setValidate({ ...validated, message: true });
-            } else {
-                setValidate({ ...validated, message: false });
-            }
+            value = e.target.value.trim() ? true : false;
+            setValidate({ ...validated, message: value });
             setData({ ...data, message: e.target.value });
         }
     };
@@ -71,8 +66,15 @@ const Form = () => {
         } else {
             setIsValidated(false);
         }
-        console.log(env);
     }, [validated]);
+
+    useEffect(() => {
+        if (data.mail.trim() && !validated.mail) {
+            setWrite(true);
+        } else {
+            setWrite(false);
+        }
+    }, [data.mail]);
 
 
     return (
@@ -82,6 +84,7 @@ const Form = () => {
                     <FormGroup >
                         <div className={styles['contact__field']}>
                             <TextField
+                                error={isWrite}
                                 required
                                 id="mail"
                                 label="Mail Contact"
